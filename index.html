@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>陈俊年的个人简历</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./loading.css"> -->
+    <!-- <link rel="shortcut icon" href="http://127.0.0.1:8080//favicon.ico" /> -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
+
+    <script src="//at.alicdn.com/t/font_1963795_l3f6u74kcdp.js">
+
+
+
+    </script>
+    <style type="text/css">
+        .loading {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .loading::before,
+        .loading::after {
+            content: '';
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            background: black;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            animation: loadingAnime 1.1s linear infinite;
+        }
+
+        .loading::after {
+            animation-delay: 0.5s
+        }
+
+        @keyframes loadingAnime {
+            from {
+                width: 0px;
+                height: 0px;
+                opacity: 0.65;
+            }
+
+            to {
+                width: 100px;
+                height: 100px;
+                opacity: 0;
+            }
+        }
+
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        /* 加载动画部分 */
+        .site-welcome {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ddd;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* 加载动画部分 */
+        .site-welcome.active {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div id=siteWelcome class="site-welcome active">
+        <div class="loading">
+
+        </div>
+    </div>
+    <!-- <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-tuite"></use>
+    </svg> -->
+    <div id='topNavBar' class="top-Nav-Bar">
+        <div class="topNavBar-son clearfix">
+            <a href="#" class="logo" alt="logo" style="float: left;">
+                <span class="rs">MY</span><span class="card">card</span>
+            </a>
+            <!-- <img src="#" alt="logo"> -->
+            <nav class='menu' style="float: right;">
+                <ul class="clearfix">
+                    <li><a href="#siteAbout">关于</a></li>
+                    <li><a href="#siteSkills">技能</a></li>
+                    <li>
+                        <a href="#siteWorks">作品</a>
+                        <ul class="subMenu">
+                            <li><a href="https://camaze.github.io/easyTo/" target="_blank">作品1</a></li>
+                            <li><a href="https://camaze.github.io/canvasPC/index.html" target="_blank">作品2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">博客</a>
+                        <ul class="subMenu">
+                            <li><a href="https://github.com/camaze" target="_blank">Github</a></li>
+                            <li><a href="https://www.jianshu.com/u/765cce1cf90e" target="_blank">简书</a></li>
+                        </ul>
+                    </li>
+                    <li><a id=contactMe href="#">联系方式</a></li>
+                    <li><a href="#">其他</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="mask"></div>
+    </div>
+
+    <main>
+        <div data-x id='siteAbout' class="userCard">
+            <div class="pictureAndText clearfix">
+                <div class='picture'>
+                    <img src="./img/my_photo.jpg" width=297px height=340px alt="头像">
+                </div>
+                <div class="text">
+                    <span class="greeting">Hello
+                        <span class="triangle"></span>
+                    </span>
+                    <h1>陈俊年</h1>
+                    <p>前端开发</p>
+                    <hr>
+                    <dl>
+                        <dt>年龄</dt>
+                        <dd>22</dd>
+                        <dt>邮箱</dt>
+                        <dd>1046783533@qq.com</dd>
+                        <dt>手机</dt>
+                        <dd>13033871351</dd>
+                    </dl>
+                </div>
+            </div>
+            <footer class="media">
+                <a href="https://github.com/camaze" target=" _blank">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github1"></use>
+                    </svg>
+                </a>
+                <a href="https://www.jianshu.com/u/765cce1cf90e" target=" _blank">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibiaoti-"></use>
+                    </svg>
+                </a>
+                <a href="https://twitter.com" target=" _blank">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-tuite"></use>
+                    </svg>
+                </a>
+                <a href="https://weibo.com/" target=" _blank">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
+
+            </footer>
+        </div>
+        <p class="downloadResume-wrapper">
+            <a class="downloadResume" href="./resume_cjn.pdf" target=" _blank" download>下载pdf简历</a>
+        </p>
+        <p class="selfIntroduction">
+            陈俊年，华中科技大学毕业。 <br>
+            技能：前端开发
+        </p>
+    </main>
+
+    <section data-x id='siteSkills' class="skills">
+        <h2>技能</h2>
+        <ol class="clearfix">
+            <li>
+                <h3>
+                    HTML5 &amp; CSS3
+                </h3>
+                <div class="progressBar">
+                    <div class="progress">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3>
+                    JavaScript
+                </h3>
+                <div class="progressBar">
+                    <div class="progress">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3>
+                    jQuery
+                </h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 40%;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3>
+                    React
+                </h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 30%;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3>
+                    Vue
+                </h3>
+                <div class=" progressBar">
+                    <div class="progress" style="width: 50%;">
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h3>
+                    http
+                </h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:60%;">
+
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <section data-x id='siteWorks' class="portfolio">
+        <h2>作品集</h2>
+        <nav>
+            <ol class="clearfix">
+                <li id="portfolio1">所有</li>
+                <li id="portfolio2">框架</li>
+                <li id="portfolio3">原生JS &amp; CSS</li>
+            </ol>
+            <div id="portfolioBar" class="bar state-1">
+                <div class="bar-inner"></div>
+            </div>
+        </nav>
+
+        <script>
+            portfolio1.onclick = function () {
+                portfolioBar.className = "bar state-1"
+            }
+
+            portfolio2.onclick = function () {
+                portfolioBar.className = "bar state-2"
+            }
+
+            portfolio3.onclick = function () {
+                portfolioBar.className = "bar state-3"
+            }
+        </script>
+
+        <!-- 下面这个div只供展示所有作品，另外的框架作品、原生js点击时待做 -->
+        <div class="works" style="height: 500px;">
+            <div class="big" style="top: 0; left: 0;">
+                <a href="https://camaze.github.io/easyTo/" target="_blank"><img src="./img/work1.jpg" alt="作品1"></a>
+            </div>
+            <div class="small" style="top: 0; left: 636px;">
+                <a href="https://camaze.github.io/canvasPC/index.html" target="_blank"><img src="./img/work2.jpg"
+                        alt="作品2"></a>
+            </div>
+            <div class="small" style="top: 299px; left: 636px;">
+                <img src="./img/3.jpg" alt="作品3">
+            </div>
+        </div>
+    </section>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.0/tween.umd.js'></script>
+    <script>
+        // 全部东西加载完成， 加载动画失效  加载动画保证有t秒
+        setTimeout(function () {
+            siteWelcome.classList.remove('active')
+        }, 1500)
+
+        //添加offset类，滑到的时候动一下，注意第一个要一开始就动一下。
+        let specialTags = document.querySelectorAll('[data-x]')
+        for (let i = 0; i < specialTags.length; i++) {
+            specialTags[i].classList.add('offset')
+        }
+        //先执行一次，保证第一个关于会动。注意时间设定要大于等于上面的加载动画时间
+        setTimeout(function () {
+            findClosest()
+        }, 1500)
+        // 滚动鼠标
+        window.onscroll = function (xxx) {
+            if (window.scrollY > 0) {
+                topNavBar.classList.add('sticky')
+            } else {
+                topNavBar.classList.remove('sticky')
+            }
+            findClosest()
+        }
+
+        function findClosest() {
+            let specialTags = document.querySelectorAll('[data-x]')
+            let minIndex = 0
+            for (let i = 0; i < specialTags.length; i++) {
+                if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop -
+                        window.scrollY)) {
+                    minIndex = i
+                }
+            }
+            // for (let i = 0; i < specialTags.length; i++) {
+            //     specialTags[i].classList.remove('active')
+            // }
+            // minIndex为距离窗口顶部最近元素。找到它后，1让他不偏移 2.让他所属的nav中a标签highlight
+            specialTags[minIndex].classList.remove('offset')
+            let id = specialTags[minIndex].id
+            let a = document.querySelector('a[href="#' + id + '"]')
+            let li = a.parentNode
+            let brotherAndMe = li.parentNode.children
+            for (let i = 0; i < brotherAndMe.length; i++) {
+                brotherAndMe[i].classList.remove('highlight')
+            }
+            li.classList.add('highlight')
+        }
+        // let liTags = document.getElementsByClassName('menuTrigger')
+        // 下面这行获取所有满足的li
+        let liTags = document.querySelectorAll('nav.menu > ul >li')
+
+        // Setup the animation loop. 缓入动画，点击关于之类慢慢移动过去
+        function animate(time) {
+            requestAnimationFrame(animate)
+            TWEEN.update(time)
+        }
+        requestAnimationFrame(animate)
+
+        for (let i = 0; i < liTags.length; i++) {
+            // 鼠标进入就反应
+            liTags[i].onmouseenter = function (x) {
+                let li = x.currentTarget
+                li.classList.add('active')
+                // let brother = li.getElementsByTagName('ul')[0]
+                // brother.classList.add('active')
+
+                // let brother = a.nextSibling
+                // 害怕取到文本节点
+                // while (brother.tagName !== 'UL') {
+                //     brother = brother.nextSibling
+                // }
+
+            }
+            liTags[i].onmouseleave = function (x) {
+                let li = x.currentTarget
+                li.classList.remove('active')
+                // let brother = li.getElementsByTagName('ul')[0]
+
+                // brother.classList.remove('active')
+                // 害怕取到文本节点
+                // while (brother.tagName !== 'UL') {
+                //     brother = brother.nextSibling
+                // }
+            }
+        }
+        // 点击关于等的动画效果到指定页面
+        let aTags = document.querySelectorAll('nav.menu >ul >li > a')
+        for (let i = 0; i < aTags.length; i++) {
+            aTags[i].onclick = function (x) {
+                x.preventDefault()
+                let a = x.currentTarget
+                let href = a.getAttribute('href') // '#siteAbout'
+                let element = document.querySelector(href)
+                // console.log(element)
+                let top = element.offsetTop
+                let currentTop = window.scrollY
+                let targetTop = top - 68
+                let s = targetTop - currentTop
+                var t = Math.abs((s / 100) * 300)
+                if (t > 500) {
+                    t = 500
+                }
+
+                // 点击关于等的动画效果到指定页面
+                // let n = 25 // 一共动25次
+                // let duration = 500 / n // 多少时间动一次  ， 要求0.5秒（500毫秒）到达指定位置
+                // let currentTop = window.scrollY
+                // let targetTop = top - 68
+                // let perDistance = (targetTop - currentTop) / n
+                // let i = 0
+                // let id = setInterval(() => {
+                //     if (i == n) {
+                //         window.clearInterval(id) // 咋砸了闹钟
+                //         return
+                //     }
+                //     i++
+                //     window.scrollTo(0, currentTop + perDistance * i)
+                // }, duration)
+                // window.scrollTo(0, top - 68)
+                const coords = {
+                    y: currentTop
+                }
+                const tween = new TWEEN.Tween(coords)
+                    .to({
+                        y: targetTop
+                    }, t) // Move to (300, 200) in t/1000 second. t为毫秒
+                    .easing(TWEEN.Easing.Quadratic.InOut) // Use an easing function to make the animation smooth.
+                    .onUpdate(() => {
+                        // Called after tween.js updates 'coords'.
+                        window.scrollTo(0, coords.y)
+
+                    })
+                    .start() // Start the tween immediately.
+            }
+        }
+
+        contactMe.onclick = function () {
+            alert('\n电话号码：13033871351\n \n邮箱：chenjunnian98126@163.com')
+        }
+    </script>
+</body>
+
+</html>

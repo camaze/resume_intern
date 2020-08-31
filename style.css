@@ -1,0 +1,500 @@
+body {
+    background: rgb(239, 239, 239);
+    /*字体颜色*/
+    /* color: white; */
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    /*没有下划线装饰*/
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    height: 0;
+    border: none;
+    border-top: 1px solid rgb(222, 222, 222);
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top-Nav-Bar {
+    padding: 18px 0px 18px 0px;
+    /* 字体颜色继承这个 */
+    color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.4s;
+}
+
+.top-Nav-Bar.sticky {
+    background: white;
+    padding: 10px 0;
+    z-index: 1;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+    color: #3d4451;
+}
+
+.topNavBar-son {
+    padding: 0px 13px 0px 13px;
+}
+
+.top-Nav-Bar nav {
+    padding-top: 4px;
+    padding-bottom: 3px;
+}
+
+.top-Nav-Bar nav>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-Nav-Bar nav>ul>li {
+    float: left;
+    margin-left: 23px;
+    margin-right: 23px;
+    position: relative;
+}
+
+.top-Nav-Bar nav>ul>li>a {
+    font-size: 13px;
+    /* color: rgba(255, 255, 255, 0.7); */
+    color: inherit;
+    font-weight: bold;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+
+    position: relative;
+}
+
+/****************************************** 以下是主要特效代码 *********************************************/
+
+/* 
+.top-Nav-Bar nav>ul>li>a:hover {
+    border-bottom: 3px solid rgb(232, 103, 107);
+} */
+
+.top-Nav-Bar nav>ul>li.active>a::after,
+.top-Nav-Bar nav>ul>li.highlight>a::after {
+    display: block;
+    content: '';
+    position: absolute;
+    /* border-bottom: 10px solid blue; */
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #5595D2;
+    /* border-bottom: 300px solid transparent; */
+    height: 3px;
+    animation: menuSlide 0.25s;
+}
+
+/* 红条 */
+@keyframes menuSlide {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.top-Nav-Bar .subMenu {
+    display: none;
+    position: absolute;
+    right: 0;
+    /* top: 100%; */
+    background: white;
+    color: #3d4451;
+}
+
+/* 作品、博客菜单出现动画 */
+@keyframes submenuSlide {
+    from {
+        /* transform: translateX(-50%); */
+        margin-right: 100%;
+    }
+
+    to {
+        /* transform: translateX(0); */
+        margin-right: 0%;
+    }
+}
+
+.top-Nav-Bar li.active>.subMenu {
+    display: block;
+    animation: submenuSlide 0.3s;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.top-Nav-Bar .subMenu>li {
+    white-space: nowrap;
+    padding: 5px 10px;
+}
+
+[data-x].active {
+    outline: 10px solid red;
+}
+
+[data-x].offset {
+    transform: translateY(100px);
+}
+
+[data-x] {
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+
+
+
+/****************************************以上是一些主要特效代码*****************************************/
+
+.top-Nav-Bar .logo {
+    font-size: 25px;
+    font-family: "Arial Black";
+    padding-top: 2px;
+    padding-bottom: 3px;
+}
+
+.top-Nav-Bar .logo .rs {
+    margin-right: 4px;
+    color: #5595D2;
+}
+
+.top-Nav-Bar .logo .card {
+    color: #9A9DA2
+}
+
+.banner {
+    height: 516px;
+    background-image: url(./img/sea1.jpg);
+    background-position: center center;
+    background-size: cover;
+    /* border: 1px solid red */
+}
+
+.banner .mask {
+    height: 516px;
+    background-color: rgba(60, 74, 100, 0.8);
+}
+
+.userCard {
+    /* border: 1px solid red; */
+    max-width: 931px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.45);
+}
+
+.userCard .greeting {
+    display: inline-block;
+    background: #5595D2;
+    color: white;
+    padding: 4px 15px;
+    line-height: 22px;
+    position: relative;
+    margin-bottom: 8px;
+    /*用padding及lh两行代替以下四行*/
+    /* width: 70px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center; */
+}
+
+.userCard .greeting .triangle {
+    display: block;
+    border: 7px solid transparent;
+    width: 0;
+    height: 0;
+    border-left-color: #5595D2;
+    border-top-width: 0px;
+    position: absolute;
+    left: 3px;
+    top: 100%;
+}
+
+.userCard .picture {
+    float: left;
+}
+
+.userCard .text {
+    float: left;
+    margin-left: 64px;
+    width: 440px;
+}
+
+.userCard .text h1 {
+    margin-top: 19px;
+}
+
+.userCard .text p {
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+
+.userCard .text hr {
+    margin: 23px 0;
+}
+
+.userCard .pictureAndText {
+    padding: 50px 60px;
+}
+
+.userCard dl dt,
+.userCard dl dd {
+    float: left;
+    padding: 12px 0;
+}
+
+.userCard dl dt {
+    width: 30%;
+    /* font-weight: bold; */
+}
+
+.userCard dl dd {
+    width: 70%;
+    color: #9da0a7;
+}
+
+.userCard>footer.media {
+    background: #5595D2;
+    text-align: center;
+}
+
+.userCard>footer.media>a {
+    /* border: 1px solid black; */
+    display: inline-block;
+    border-radius: 50%;
+    width: 40px;
+    padding: 5px 0;
+    line-height: 30px;
+    margin: 12px;
+}
+
+.userCard>footer.media>a:hover {
+    background: #4a7cad;
+}
+
+.userCard svg {
+    width: 30px;
+    height: 30px;
+    fill: white !important;
+    vertical-align: top;
+}
+
+body>main {
+    margin-top: -345px;
+    /* border: 1px solid red; */
+}
+
+body>main .downloadResume-wrapper {
+    text-align: center;
+}
+
+body>main .downloadResume {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 21px 55px;
+    display: inline-block;
+    border: 1px solid rgb(203, 205, 207);
+    background: rgb(239, 239, 239);
+    border-radius: 2px;
+    color: #3d4451;
+    font-weight: bold;
+    margin: 34px;
+    transition: box-shadow 0.3s;
+}
+
+body>main .downloadResume:hover {
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.selfIntroduction {
+    max-width: 931px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: KaiTi;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: bold;
+}
+
+section.skills,
+.portfolio {
+    max-width: 931px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+section.skills>h2 {
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: center;
+}
+
+section.skills h3 {
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+    color: #3d4451;
+}
+
+section.skills>ol {
+    background: white;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.45);
+    padding: 42px 50px 10px;
+    margin-top: 30px;
+}
+
+section.skills>ol>li {
+    /* border: 1px solid red; */
+    float: left;
+    width: 47%;
+}
+
+section.skills>ol>li:nth-child(even) {
+    float: right;
+}
+
+
+
+section.skills .progressBar {
+    height: 5px;
+    background: #c2d2e1;
+    border-radius: 2px;
+    margin: 5px 0 36px 0;
+    /* 溢出隐藏  动态效果用 */
+    overflow: hidden;
+}
+
+section.skills .progressBar .progress {
+    height: 100%;
+    background: #5595D2;
+    width: 70%;
+    border-radius: 2px;
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+section.skills.offset .progress {
+    transform: translateX(-100%);
+}
+
+section.portfolio>h2 {
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* 作品集 */
+section.portfolio {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+section.portfolio>nav {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 34px;
+}
+
+section.portfolio>nav>ol {
+    /* border: 1px solid red; */
+    display: inline-block;
+    vertical-align: top;
+}
+
+section.portfolio>nav>ol>li {
+    float: left;
+    margin-left: 40px;
+    /* 鼠标移上去变小手 */
+    cursor: pointer;
+}
+
+section.portfolio>nav>ol>li:nth-child(1) {
+    margin-left: 0;
+}
+
+section.portfolio>nav>.bar {
+    /* border: 1px solid red; */
+    height: 5px;
+    background: white;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-radius: 2px;
+}
+
+section.portfolio>nav .bar-inner {
+    height: 100%;
+    /* width: 70%; */
+    /*状态机切换不固定宽度*/
+    background: #5595D2;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+section.portfolio>nav .bar.state-1 .bar-inner {
+    margin-left: 0;
+    width: 32px;
+}
+
+section.portfolio>nav .bar.state-2 .bar-inner {
+    margin-left: 72px;
+    width: 34px;
+}
+
+section.portfolio>nav .bar.state-3 .bar-inner {
+    margin-left: 144px;
+    width: 99px;
+}
+
+section.portfolio .works {
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+section.portfolio .works>.big,
+section.portfolio .works>.small {
+    position: absolute;
+}
